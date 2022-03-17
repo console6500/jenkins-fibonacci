@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - run: chmod +x ./fibonacci.sh
+      - run: chmod +x ./scripts/fibonacci.sh
       
       - name: Relative path
         run: ./scripts/fibonacci.sh 10
