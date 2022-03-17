@@ -9,8 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run a multi-line script
-        run: |
-          chmod +x ./fibonacci.sh
-          ./scripts/fibonacci.sh 10
-          ./scripts/fibonacci.sh 20
+      
+      - run: chmod +x ./fibonacci.sh
+      
+      - name: Relative path
+        run: ./scripts/fibonacci.sh 10
+        
+      - name: Full path
+        run: ${GITHUB_WORKSPACE}/scripts/fibonacci.sh 10
