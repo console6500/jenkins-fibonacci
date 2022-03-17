@@ -1,0 +1,16 @@
+name: Fibonacci
+ the workflow will run
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a multi-line script
+        run: |
+          chmod +x ./fibonacci.sh
+          ./fibonacci.sh 10
+          ./fibonacci.sh 20
