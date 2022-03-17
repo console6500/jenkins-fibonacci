@@ -19,17 +19,17 @@ pipeline {
                 sh('chmod +x ./scripts/fibonacci.sh')
             }
         }
-        stage('Relative Path') {
+        stage('Relative path') {
             steps {
                 sh("./scripts/fibonacci.sh ${env.NUMBER}")
             }
         }
-        stage('Full Path') {
+        stage('Full path') {
             steps {
                 sh("${env.WORKSPACE}/scripts/fibonacci.sh ${env.NUMBER}")
             }
         }
-        stage('Change Directory') {
+        stage('Change directory') {
             steps {
                 dir("${env.WORKSPACE}/scripts"){
                     sh("./fibonacci.sh ${env.NUMBER}")
