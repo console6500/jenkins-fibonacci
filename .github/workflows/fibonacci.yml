@@ -12,5 +12,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           chmod +x ./fibonacci.sh
-          ./fibonacci.sh 10
-          ./fibonacci.sh 20
+          ./scripts/fibonacci.sh 10
+          ./scripts/fibonacci.sh 20
